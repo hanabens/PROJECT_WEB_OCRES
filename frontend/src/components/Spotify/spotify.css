@@ -1,8 +1,17 @@
 .PhotoArtiste {}
 
 .spotify {
-    margin-left: 350px;
+    margin-left: 300px;
     margin-top: -250px;
+    width: 350px;
+    height: 250px;
+    background: white;
+    border-color: rgb(206, 205, 205);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2%;
+    box-shadow: 2px 2px 3px rgb(174, 174, 174);
+    z-index: 0;
 }
 
 .bouton_recherche {
@@ -37,7 +46,7 @@
     border-color: rgb(206, 205, 205);
     border-radius: 30px;
     color: black;
-    width: 150px;
+    width: 100px;
     height: 35px;
     padding: 0px 20px;
     margin-left: 200px;
