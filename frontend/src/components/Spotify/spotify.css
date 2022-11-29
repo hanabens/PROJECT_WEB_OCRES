@@ -15,6 +15,7 @@
     color: black;
     width: 100px;
     height: 35px;
+    padding: 0px 20px;
 
 
 
@@ -38,6 +39,8 @@
     color: black;
     width: 150px;
     height: 35px;
+    padding: 0px 20px;
+    margin-left: 200px;
 
 }
 
@@ -49,12 +52,12 @@
 
 .formulaire_recherche {
 
-    width: 40%;
-    height: 50px;
+    width: 20%;
+    height: 35px;
     border-radius: 30px;
     box-shadow: 2px 2px 3px rgb(174, 174, 174);
     border: none;
-
+    padding: 0px 20px;
     border-color: rgb(206, 205, 205);
 
 }

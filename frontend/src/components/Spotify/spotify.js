@@ -56,7 +56,7 @@ function Spotify() {
       <div className="PhotoArtiste">
         {artists.images.length ? ( /*IMAGE DE L'ARTISTE */
           <div>
-            <img width={"40%"} src={artists.images[0].url} alt="" />
+            <img width={"20%"} src={artists.images[0].url} alt="" />
           </div>
         ) : (
           <div>No Image</div>
@@ -92,7 +92,7 @@ function Spotify() {
             <form onSubmit={searchArtists}>
               <input className="formulaire_recherche"
                 type="text"
-                placeholder="  Rechercher un artiste"
+                placeholder="Rechercher un artiste"
                 onChange={(e) => setSearchKey(e.target.value)}
               />
               <button className="bouton_recherche" type="submit"> Rechercher </button>
