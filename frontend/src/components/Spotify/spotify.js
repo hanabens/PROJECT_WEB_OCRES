@@ -56,7 +56,7 @@ function Spotify() {
       <div className="PhotoArtiste">
         {artists.images.length ? ( /*IMAGE DE L'ARTISTE */
           <div>
-            <img width={"20%"} src={artists.images[0].url} alt="" />
+            <img width={"30%"} src={artists.images[0].url} alt="" />
           </div>
         ) : (
           <div>No Image</div>
@@ -74,7 +74,7 @@ function Spotify() {
 
         {!token ? (
 
-          //LIEN DE CONNEXIN 
+          //LIEN DE CONNEXION 
           <a className="se_connecter"
             href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}
           >
@@ -84,7 +84,7 @@ function Spotify() {
 
         ) : (
 
-          <button className="bouton_deconnexion" onClick={logout}> Se deconnecter</button>
+          <button className="bouton_deconnexion" onClick={logout}>Deconnexion</button>
         )}
         {console.log("token", token)}
         {token ? (
