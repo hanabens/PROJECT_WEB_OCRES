@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import './spotify.css';
 
 const SpotifyGetPlaylists = () => {
   const [token, setToken] = useState("");
@@ -15,7 +16,7 @@ const SpotifyGetPlaylists = () => {
     axios.get("https");
   };
 
-  return <button> Obtenir la Playlist </button>;
+  return <button className="playlist">Playlist </button>;
 };
 
 export default SpotifyGetPlaylists;
