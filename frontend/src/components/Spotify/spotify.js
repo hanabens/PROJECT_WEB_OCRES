@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "./spotify.css";
 import axios from "axios";
-import './spotify.css';
 import SpotifyGetPlaylists from "./SpotifyGetPlaylists";
 
 function Spotify() {
@@ -54,7 +53,7 @@ function Spotify() {
     }
     return (
       <div className="PhotoArtiste">
-        {artists.images.length ? ( /*IMAGE DE L'ARTISTE */
+        {artists.images.length /*IMAGE DE L'ARTISTE */ ? (
           <div>
             <img width={"30%"} src={artists.images[0].url} alt="" />
           </div>
@@ -67,35 +66,36 @@ function Spotify() {
   };
 
   return (
-
     <div className="spotify">
-
       <header className="spotify-header">
-
         {!token ? (
-
-          //LIEN DE CONNEXION 
-          <a className="se_connecter"
+          //LIEN DE CONNEXION
+          <a
+            className="se_connecter"
             href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}
           >
             {" "}
             <button type="submit"> Connexion a Spotify </button>
           </a>
-
         ) : (
-
-          <button className="bouton_deconnexion" onClick={logout}>Deconnexion</button>
+          <button className="bouton_deconnexion" onClick={logout}>
+            Deconnexion
+          </button>
         )}
         {console.log("token", token)}
         {token ? (
           <div>
             <form onSubmit={searchArtists}>
-              <input className="formulaire_recherche"
+              <input
+                className="formulaire_recherche"
                 type="text"
                 placeholder="Rechercher un artiste"
                 onChange={(e) => setSearchKey(e.target.value)}
               />
-              <button className="bouton_recherche" type="submit"> Rechercher </button>
+              <button className="bouton_recherche" type="submit">
+                {" "}
+                Rechercher{" "}
+              </button>
               <SpotifyGetPlaylists />
             </form>
             {renderArtists()}
@@ -105,7 +105,6 @@ function Spotify() {
         )}
       </header>
     </div>
-
   );
 }
 

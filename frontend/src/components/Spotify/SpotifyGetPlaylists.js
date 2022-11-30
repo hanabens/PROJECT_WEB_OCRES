@@ -7,7 +7,8 @@ const PLAYLIST_ENDPOINT = "https://api.spotify.com/v1/me/playlists";
 
 const SpotifyGetPlaylists = () => {
   const [token, setToken] = useState("");
-  const [data, setData] = useState([0]);
+  const [data, setData] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     if (localStorage.getItem("token")) {
@@ -18,13 +19,17 @@ const SpotifyGetPlaylists = () => {
   const handleGetPlaylists = async (e) => {
     e.preventDefault();
     //  empecher l'erreur de base avec e.preventDefault au lieu d'utiliser catch(error)
-    const { data } = await axios.get(PLAYLIST_ENDPOINT, {
+    const response = await axios.get(PLAYLIST_ENDPOINT, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     });
-    setData(e.data);
-    console.log(data.items[0].name);
+
+    if (response.data.items.length > 0) {
+      setData(response.data.items);
+    } else {
+      setError("No playlist found");
+    }
   };
 
   return (
@@ -36,14 +41,18 @@ const SpotifyGetPlaylists = () => {
       </button>
       <div>
         {
-          data?.items ? (
-            data.items.map((item) => <p>{item.name}</p>)
+          // if data is not empty
+          data.length > 0 ? (
+            data.map((item) => {
+              return <div key={item.id}>{item.name}</div>;
+            })
           ) : (
-            <h1>Test</h1>
+            <div>{error}</div>
           )
-          //   si y'a des data on peut acceder aux items,
-          // ici ce que l'on map c'est la liste d'objet item et on va récup que certaines infos
         }
+
+        {/* //   si y'a des data on peut acceder aux items,
+          // ici ce que l'on map c'est la liste d'objet item et on va récup que certaines infos */}
       </div>
     </div>
   );
