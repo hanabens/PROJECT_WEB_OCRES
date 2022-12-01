@@ -75,7 +75,7 @@ function Spotify() {
             href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}
           >
             {" "}
-            <button type="submit"> Connexion a Spotify </button>
+            <button className="se_connecterboutton" type="submit">Connexion a Spotify</button>
           </a>
         ) : (
           <button className="bouton_deconnexion" onClick={logout}>
