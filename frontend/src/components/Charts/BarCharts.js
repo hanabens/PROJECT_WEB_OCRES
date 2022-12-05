@@ -1,6 +1,7 @@
 import React from "react";
 import { Chart as ChartJS, BarElement } from "chart.js";
 import { Bar } from "react-chartjs-2";
+import "./charts.css";
 
 ChartJS.register(BarElement);
 
@@ -49,7 +50,7 @@ const BarChart = () => {
   };
 
   return (
-    <div>
+    <div className="widget_graphique2">
       <Bar data={data} height={400} options={options} />
     </div>
   );

@@ -1,5 +1,52 @@
+.widget_Horloge {
+
+
+    margin-top: -250px;
+    margin-left: 80%;
+    width: 20%;
+    height: 250px;
+    background: white;
+    border-color: rgb(206, 205, 205);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2%;
+    box-shadow: 2px 2px 3px rgb(174, 174, 174);
+    z-index: 0;
+
+
+
+
+
+}
+
 .Horloge {
-    display: flex;
-    justify-content: center;
+    color: #f072a0;
+    font-weight: bolder;
+    text-align: center;
+    font-size: x-large;
+    margin-top: 70px;
+    text-decoration: overline;
+    font-family: 'Inria Sans';
+
+
+}
+
+.titre_Horloge {
+    text-align: center;
+    margin-top: 10px;
+    font-size: small;
+    background-color: #FED3D3;
+    box-shadow: 2px 2px 3px rgb(174, 174, 174);
+    border: none;
+    border-color: rgb(206, 205, 205);
+
+    margin-left: 3%;
+    height: 25px;
+    color: black;
+    font-family: 'Inria Sans';
+    padding: 5px;
+    width: 100px;
+    height: 25px;
+
 
 }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './horloge.css';
 
 function Horloge() {
+
     const [horlogeState, setHorlogeState] = useState();
 
     useEffect(() => {
@@ -13,7 +14,12 @@ function Horloge() {
 
     }, []);
 
-    return <div>{horlogeState}</div>
+    return <div className='widget_Horloge'>
+        <div className='titre_Horloge'> Heure UTC+1 </div>
+        <div className='Horloge'>
+            {horlogeState}
+        </div>
+    </div>
 
 }
 
