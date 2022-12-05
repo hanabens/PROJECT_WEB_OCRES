@@ -16,10 +16,12 @@ const data = {
 
 function Plot() {
   return (
-    <div className="Chart">
-      <div className="container">
-        <div className="card">
-          <Line data={data} />
+    <div className="widget_graphique">
+      <div className="Chart">
+        <div className="container">
+          <div className="card">
+            <Line data={data} />
+          </div>
         </div>
       </div>
     </div>

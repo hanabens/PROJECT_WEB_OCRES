@@ -27,33 +27,38 @@ function Meteo() {
   };
 
   return (
-    <div className="Meteo">
-      <header className="Meteo-header">
-        <h1> METEO </h1>
-        {/* SEARCH BOXE */}
-        <div>
-          <input
-            type="text"
-            placeholder="Entrer une ville"
-            onChange={(e) => setSearch(e.target.value)}
-          />
-
-          <button onClick={searchPressed}> Reherche </button>
-        </div>
-        {weather ? <p>location: {weather.name}</p> : <p>{error}</p>}
-        {/* TEMPERATURE  */}
-        {weather ? <p> {weather.main.temp}°F</p> : <p>{error}</p>}
-        {/* CONDITIONS METEO */}
-
-        {weather ? (
+    <div className="widget_meteo">
+      <div className="Meteo">
+        <header className="Meteo-header">
+          <div className="titre_meteo"> METEO </div>
+          {/* Recherche de la ville */}
           <div>
-            <p> {weather.weather[0].main}</p>
-            <p> {weather.weather[0].description}</p>{" "}
+            <input
+              className="formulaire_meteo"
+              type="text"
+              placeholder="Entrer une ville"
+              onChange={(e) => setSearch(e.target.value)}
+            />
+
+            <button className="bouton_recherche" onClick={searchPressed}> Reherche </button>
           </div>
-        ) : (
-          <p>{error}</p>
-        )}
-      </header>
+          <div className="paragraphe recherche">
+            {weather ? <div className="Lieu"> Lieu : {weather.name}</div> : <p>{error}</p>}
+            {/* TEMPERATURE  */}
+            {weather ? <div className="Temperature">Température : {weather.main.temp}°F</div> : <p>{error}</p>}
+            {/* CONDITIONS METEO */}
+          </div>
+
+          {weather ? (
+            <div className="actu_prev">
+              <div className="Actuellement"> Actuellement : </div> <p>{weather.weather[0].main}</p>
+              <div className="Previsions"> Prévisions : </div> <p>{weather.weather[0].description}</p>{" "}
+            </div>
+          ) : (
+            <p>{error}</p>
+          )}
+        </header>
+      </div>
     </div>
   );
 }

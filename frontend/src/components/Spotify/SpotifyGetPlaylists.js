@@ -33,13 +33,13 @@ const SpotifyGetPlaylists = () => {
   };
 
   return (
-    <div>
+    <div className="widget_playlist">
       {/* rajoute une div parce que react ne veut renvoyer tjrs qu'un seul element d'un components */}
       <button className="playlist" onClick={handleGetPlaylists}>
         {" "}
         Playlist{" "}
       </button>
-      <div>
+      <div className="Affichage_Playlist">
         {
           // if data is not empty
           data.length > 0 ? (
