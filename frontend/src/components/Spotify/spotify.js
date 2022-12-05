@@ -4,9 +4,9 @@ import axios from "axios";
 import SpotifyGetPlaylists from "./SpotifyGetPlaylists";
 
 function Spotify() {
-  const CLIENT_ID = "4758a41c44b8416b81efdb1e1f9a9ff5";
-  const REDIRECT_URI = "http://localhost:3000/dashboard";
-  const AUTH_ENDPOINT = "http://accounts.spotify.com/authorize";
+  const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
+  const REDIRECT_URI = process.env.REACT_APP_EDIRECT_URI;
+  const AUTH_ENDPOINT = process.env.REACT_APP_AUTH_ENDPOINT;
   const RESPONSE_TYPE = "token";
   const [token, setToken] = useState("");
   const [searchKey, setSearchKey] = useState("");
@@ -75,7 +75,9 @@ function Spotify() {
             href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}
           >
             {" "}
-            <button className="se_connecterboutton" type="submit">Connexion a Spotify</button>
+            <button className="se_connecterboutton" type="submit">
+              Connexion a Spotify
+            </button>
           </a>
         ) : (
           <button className="bouton_deconnexion" onClick={logout}>

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./spotify.css";
 
-const PLAYLIST_ENDPOINT = "https://api.spotify.com/v1/me/playlists";
+const PLAYLIST_ENDPOINT = process.env.REACT_APP_PLAYLIST_ENDPOINT;
 // end point = la fin de l'url ici 'playlist'
 
 const SpotifyGetPlaylists = () => {
