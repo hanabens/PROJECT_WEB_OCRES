@@ -4,13 +4,12 @@ import { Line } from "react-chartjs-2";
 
 // on a besoin de faire passer nos données
 const data = {
-  labels: ["Red", "Blue", "Green", "Violet", "Orange", "Yellow"],
+  labels: ["Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre"],
   datasets: [
     // intitulé du graphique
     {
-      label: "Couleurs préférées des Français",
-      data: ["22", "33", "44", "32", "1", "67"],
-      backgroundColor: ["Red", "Blue", "Green", "Violet", "Orange", "Yellow"],
+      label: "Nombre d'ecoute par mois en million",
+      data: ["42", "41", "40", "39.5", "42", "39"],
     },
   ],
 };
