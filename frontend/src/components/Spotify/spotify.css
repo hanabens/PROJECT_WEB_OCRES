@@ -1,3 +1,28 @@
+.se_connecterboutton {
+    background-color: #a7bbf6;
+    box-shadow: 2px 2px 3px rgb(174, 174, 174);
+    border: none;
+    border-color: rgb(206, 205, 205);
+    border-radius: 30px;
+    color: black;
+    margin-left: 10px;
+    margin-top: 10px;
+
+}
+
+
+.se_connecterboutton:hover {
+    background-color: #bea6de;
+    border: 3px solid black;
+    font-style: italic;
+    padding: 1px;
+
+
+}
+
+
+
+
 .PhotoArtiste {
 
     margin-left: 10px;
