@@ -1,1 +1,89 @@
+.widget_meteo {
 
+
+    margin-top: -30.5%;
+    margin-left: 63%;
+    height: 385px;
+    width: 37%;
+    background: white;
+    border-color: rgb(206, 205, 205);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2%;
+    box-shadow: 2px 2px 3px rgb(174, 174, 174);
+    z-index: 0;
+
+}
+
+
+
+.titre_meteo {
+    text-align: center;
+    margin-top: 10px;
+    font-size: small;
+    background-color: #FED3D3;
+    box-shadow: 2px 2px 3px rgb(174, 174, 174);
+    border: none;
+    border-color: rgb(206, 205, 205);
+    margin-top: 20px;
+    margin-left: 3%;
+    height: 25px;
+    color: black;
+    font-family: 'Inria Sans';
+    padding: 5px;
+    width: 100px;
+    height: 25px;
+
+}
+
+.formulaire_meteo {
+    width: 51%;
+    height: 25px;
+    border-radius: 40px;
+    box-shadow: 2px 2px 3px rgb(174, 174, 174);
+    border: none;
+    padding: 0px 20px;
+    border-color: rgb(206, 205, 205);
+    margin-left: 2%;
+    margin-top: 30px;
+    font-family: 'Inria Sans';
+}
+
+
+
+
+.Lieu {
+    margin-top: 10%;
+    font-size: x-large;
+    text-align: center;
+    text-decoration: underline;
+    color: #f072a0;
+    font-weight: bolder;
+
+}
+
+.Temperature {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: x-large;
+    text-align: center;
+    text-decoration: underline;
+    color: #f072a0;
+    font-weight: bolder;
+
+
+
+}
+
+.actu_prev {
+    margin-left: 5%;
+}
+
+.Actuellement,
+.Previsions {
+
+    color: #bea6de;
+    margin-left: 5%;
+
+
+}
