@@ -30,6 +30,40 @@
     width: 90%;
 }
 
+.affichage_notesbdd {
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.content_notesbdd,
+.titre_notesbdd {
+
+    font-size: small;
+    margin-left: 10%;
+    margin-top: -6%;
+
+}
+
+.titre_notesbdd {
+    font-weight: bold;
+}
+
+.supprimer_notesbdd {
+    font-family: 'Inria Sans';
+    background-color: #a7bbf6;
+    box-shadow: 2px 2px 3px rgb(174, 174, 174);
+    border: none;
+    border-radius: 30px;
+
+
+}
+
+.supprimer_notesbdd:hover {
+    background-color: #bea6de;
+    border: 3px solid black;
+    font-style: italic;
+}
+
 
 
 .Ajouter {
@@ -39,10 +73,6 @@
     border: none;
     border-radius: 30px;
     margin-left: 2%;
-
-
-
-
 }
 
 .Ajouter:hover {

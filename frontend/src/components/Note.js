@@ -57,32 +57,29 @@ const Note = () => {
         </form>
         <button className="Afficher" onClick={fetchNotes}> Afficher les notes
         </button>
+
+        <div>
+          {
+            // if data is not empty
+            data.length > 0 ? (
+              data.map((item) => {
+                return (
+                  <div className="affichage_notesbdd" key={item.id}>
+                    <button className="supprimer_notesbdd" onClick={async () => await axios.delete(`/note/${item._id}`)}>X</button>
+                    <div className="titre_notesbdd">{item.title} :
+                      {item.content}</div>
+
+                  </div>
+                );
+              })
+            ) : (
+              <div>{error}</div>
+            )
+          }
+        </div>
       </div>
 
-      <div>
-        {
-          // if data is not empty
-          data.length > 0 ? (
-            data.map((item) => {
-              return (
-                <div key={item.id}>
-                  <h2>{item.title}</h2>
-                  <p>{item.content}</p>
-                  <button
-                    onClick={async () =>
-                      await axios.delete(`/note/${item._id}`)
-                    }
-                  >
-                    Supprimer
-                  </button>
-                </div>
-              );
-            })
-          ) : (
-            <div>{error}</div>
-          )
-        }
-      </div>
+
     </div>
   );
 };
