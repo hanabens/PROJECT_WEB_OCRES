@@ -14,7 +14,7 @@ const noteSchema = new Schema(
       required: true,
     },
   },
-  { timestamps: true }
+  { timestamps: true } // L'heure à laquelle l'élément à été crée
 );
 
 module.exports = mongoose.model("Note", noteSchema);
