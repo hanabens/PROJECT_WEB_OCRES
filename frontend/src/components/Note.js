@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
-
 import "./note.css";
+
 
 const Note = () => {
   const [title, setTitle] = useState("");
@@ -39,8 +39,8 @@ const Note = () => {
 
       <div className="rectangle">
         <form onSubmit={handleSubmit}>
-          <h2 className="titre_notes">Notes</h2>
           <input
+            className="Titre"
             type="text"
             placeholder="Titre"
             required
@@ -48,43 +48,38 @@ const Note = () => {
           />
           <textarea
             className="note_texte"
-            id="ameliorer"
-            rows="5"
-            cols="28"
+            placeholder="Ecrire une note ici "
             onChange={(e) => setContent(e.target.value)}
           />
           <button className="Ajouter" type="submit">
             Ajouter une note
           </button>
         </form>
-        <button className="Ajouter" onClick={fetchNotes}>
-          Afficher les notes
+        <button className="Afficher" onClick={fetchNotes}> Afficher les notes
         </button>
+
+        <div>
+          {
+            // if data is not empty
+            data.length > 0 ? (
+              data.map((item) => {
+                return (
+                  <div className="affichage_notesbdd" key={item.id}>
+                    <button className="supprimer_notesbdd" onClick={async () => await axios.delete(`/note/${item._id}`)}>X</button>
+                    <div className="titre_notesbdd">{item.title} :
+                      {item.content}</div>
+
+                  </div>
+                );
+              })
+            ) : (
+              <div>{error}</div>
+            )
+          }
+        </div>
       </div>
-      <div>
-        {
-          // if data is not empty
-          data.length > 0 ? (
-            data.map((item) => {
-              return (
-                <div key={item.id}>
-                  <h2>{item.title}</h2>
-                  <p>{item.content}</p>
-                  <button
-                    onClick={async () =>
-                      await axios.delete(`/note/${item._id}`)
-                    }
-                  >
-                    Supprimer
-                  </button>
-                </div>
-              );
-            })
-          ) : (
-            <div>{error}</div>
-          )
-        }
-      </div>
+
+
     </div>
   );
 };
