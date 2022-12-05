@@ -8,6 +8,7 @@
     margin-left: 10px;
     margin-top: 10px;
     font-family: 'Inria Sans';
+    cursor: pointer;
 
 }
 
@@ -58,6 +59,7 @@
     padding: 0px 20px;
     margin-left: 2%;
     padding: 5px;
+    cursor: pointer;
 
 }
 
@@ -85,6 +87,7 @@
     margin-top: 10px;
     padding: 5px;
     font-family: 'Inria Sans';
+    cursor: pointer;
 
 
 }
@@ -145,6 +148,7 @@
     height: 25px;
     padding: 5px;
     font-family: 'Inria Sans';
+    cursor: pointer;
 }
 
 .playlist:hover {

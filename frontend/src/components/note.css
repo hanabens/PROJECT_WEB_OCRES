@@ -73,6 +73,7 @@
     border: none;
     border-radius: 30px;
     margin-left: 2%;
+    cursor: pointer;
 }
 
 .Ajouter:hover {
@@ -89,6 +90,7 @@
     height: 10%;
     margin-top: 3%;
     margin-left: 2%;
+    cursor: pointer;
 }
 
 .Afficher:hover {
