@@ -45,7 +45,7 @@ function Meteo() {
           <div className="paragraphe recherche">
             {weather ? <div className="Lieu"> Lieu : {weather.name}</div> : <p>{error}</p>}
             {/* TEMPERATURE  */}
-            {weather ? <div className="Temperature">Température : {weather.main.temp}°F</div> : <p>{error}</p>}
+            {weather ? <div className="Temperature">Température : {weather.main.temp}K</div> : <p>{error}</p>}
             {/* CONDITIONS METEO */}
           </div>
 
