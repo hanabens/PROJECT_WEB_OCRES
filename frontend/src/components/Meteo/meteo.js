@@ -40,7 +40,7 @@ function Meteo() {
               onChange={(e) => setSearch(e.target.value)}
             />
 
-            <button className="bouton_recherche" onClick={searchPressed}> Reherche </button>
+            <button className="bouton_recherche" onClick={searchPressed}> Recherche </button>
           </div>
           <div className="paragraphe recherche">
             {weather ? <div className="Lieu"> Lieu : {weather.name}</div> : <p>{error}</p>}
